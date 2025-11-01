@@ -9,25 +9,45 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+        {/* Enlace básico */}
+        <a href="https://example.com">Enlace simple</a>
+
+        {/* Enlace que abre en nueva pestaña */}
+        <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+          Abrir en nueva pestaña
         </a>
-        <a href="https://react.dev" target="_blank">
+
+        {/* Enlace con estilos inline */}
+        <a 
+          href="https://example.com" 
+          style={{ color: 'blue', textDecoration: 'none', margin: '10px' }}
+        >
+          Enlace con estilo
+        </a>
+
+        {/* Enlace con evento onClick */}
+        <a 
+          href="#" 
+          onClick={(e) => {
+            e.preventDefault();
+            alert('¡Enlace clickeado!');
+          }}
+        >
+          Enlace con evento click
+        </a>
+
+        {/* Enlace con imagen */}
+        <a href="https://react.dev">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
+
+        {/* Contador original */}
+        <div className="card">
+          <button onClick={() => setCount((count) => count + 1)}>
+            count is {count}
+          </button>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR prueba prueba prueba
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
