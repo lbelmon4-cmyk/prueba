@@ -1,0 +1,1 @@
+// Este archivo debe ser CommonJS, así que renómbralo a postcss.config.cjs y elimina este archivo.
